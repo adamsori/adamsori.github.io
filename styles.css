@@ -1,0 +1,105 @@
+body {
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.terminal-container {
+    width: 80%;
+    max-width: 1200px;
+}
+
+.terminal {
+    width: 100%;
+    height: 800px; /* Defina o tamanho desejado do terminal */
+    border: 2px solid #aaa;
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    position: relative; /* Para posicionar o current-directory dentro do terminal */
+    overflow-y: scroll; /* Ativar rolagem vertical */
+}
+
+#output {
+    white-space: pre;
+}
+
+.current-directory {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    position: visible;
+    overflow-y: visible;
+}
+
+.prompt {
+    color: #00afaf;
+}
+
+/* Ocultar o cursor padrão do campo de input */
+#input {
+    color: #fff;
+    caret-color: #fff;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Estilo do cursor personalizado */
+.cursor {
+    position: absolute;
+    width: 4px;
+    height: 18px;
+    background-color: #fff;
+    opacity: 1;
+    animation: blink 0.7s infinite;
+    top: 50%;
+    left: 85px; /* Posicionar o cursor após o cifrão */
+    transform: translateY(-50%);
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Styling for the result output */
+.result {
+    color: #43e143; /* You can change the color to match the desired result color */
+}
+
+/* Styling for the result output */
+.result-files {
+    color: #cee91fe6; /* You can change the color to match the desired result color */
+}
+
+/* Styling for the result output */
+.result-cmd {
+    color: #3c3aaf; /* You can change the color to match the desired result color */
+}
+
+/* Styling for the result output */
+.result-error {
+    color: #e91f1f; /* You can change the color to match the desired result color */
+}
