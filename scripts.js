@@ -6,6 +6,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const availableCommands = ['cd', 'cat', 'ls', 'clear', 'experience', 'contact', 'education', 'about-me']; // Add other available commands here
     const availableCommandsFile = ['experience.txt']; // Add other available commands here
     
+    const multilineText = `Senior Backend Developer
+QuiteJá · Full-time
+Jun 2023 - Present · 2 mos
+Curitiba, Paraná, Brazil · Hybrid
+Collaborate in the planning and implementation of new features for a multi-tenant application. Analyze, optimize and refactor existing code to increase efficiency and reduce costs. Develop and maintain microservices.
+
+Technologies used:
+• Python (Flask, Celery, SQLAlchemy)
+• RabbitMQ
+• Apache Kafka
+• MySQL
+• MongoDB
+• AWS (RDS, S3 and ECS)
+• Docker
+• Backend Development
+• Pandas
+• Github (Git flow)
+Skills: Software Design Patterns · Coding Standards · Version Control · Amazon EC2 · Google Cloud Platform (GCP) · Data Manipulation · Pytest · Microsserviços · RabbitMQ · Celery · Integração e entrega contínuas (CI/CD) · Docker · Scrum · Python · REST APIs · MySQL · Linux Server · SQL · Metodologias ágeis · Banco de dados · Problem Solving · Back-End Web Development · Flask · MongoDB · Estruturas de dados`;
+
     function printOutput(text, isResult) {
         const outputLine = document.createElement('div');
         outputLine.textContent = text;
@@ -42,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (args[0] === 'cat') {
             if (args[1] === 'experience.txt') {
                 if (currentDirectory === '[CURDIR]: /home/experience') {
-                    printOutput('Your relevant experience details go here.');
+                    printOutput(multilineText);
                 } else {
                     printOutput(`No such file: ${args[1]}`, 'error'	);
                 }
